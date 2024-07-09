@@ -28,7 +28,17 @@ class QuantumLayer(nn.Module):
         self.q_layer = qml.qnn.TorchLayer(circuit, weight_shapes)
         
     def forward(self, x):
-        return self.q_layer(x)
+        # Ensure x is 2D (batch_size, n_qubits)
+        batch_size = x.shape[0]
+        if x.dim() == 1:
+            x = x.unsqueeze(0)
+        
+        output = []
+        for i in range(batch_size):
+            result = self.q_layer(x[i])
+            output.append(result)
+        
+        return torch.stack(output)
 
 # Define the QuantumEEGNet
 class QuantumEEGNet(nn.Module):
@@ -73,8 +83,22 @@ class QuantumEEGNet(nn.Module):
         x = F.avg_pool2d(x, (1, 8))
         x = self.dropout(x)
         
+        # Reshape for the quantum layer
         x = x.view(x.size(0), x.size(1), -1)
-        x = torch.cat([self.quantum_layer(x[:, i, :]) for i in range(x.size(1))], dim=1)
+        print("Shape before quantum layer:", x.shape)  # Debugging statement
+
+        # Pass each channel through the quantum layer separately and concatenate the results
+        quantum_outs = []
+        print(f"Number of channels: {x.size(1)}")  # Debugging statement
+
+        for i in range(x.size(1)):
+            print(f"Processing channel {i + 1}/{x.size(1)} with shape: {x[:, i, :].shape}")  # Debugging statement
+            quantum_out = self.quantum_layer(x[:, i, :])
+            print(f"Output shape from quantum layer for channel {i + 1}: {quantum_out.shape}")  # Debugging statement
+            quantum_outs.append(quantum_out)
+        
+        x = torch.cat(quantum_outs, dim=1)
+        print("Shape after quantum layer:", x.shape)  # Debugging statement
         
         x = self.fc1(x)
         
