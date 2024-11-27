@@ -6,7 +6,9 @@
 **Authors**: Michael Chi-Sheng Chen, Samuel Yen-Chi Chen, Aidan Hung-Wen Tsai, Chun-Shu Wei  
 **Affiliations**: Neuro Industry, National Yang Ming Chiao Tung University, Brookhaven National Laboratory  
 
----
+![image](https://github.com/user-attachments/assets/76786943-880b-4134-a34e-d828f89a00f1)
+
+
 
 ## Overview
 
@@ -14,7 +16,7 @@
 
 This repository contains the implementation and experimental results for **QEEGNet**, evaluated on the **BCI Competition IV 2a** dataset.
 
----
+
 
 ## Key Features
 
@@ -23,7 +25,7 @@ This repository contains the implementation and experimental results for **QEEGN
 - **Improved Robustness**: Demonstrates enhanced accuracy and resilience to noise in EEG signal classification tasks.
 - **Generalizability**: Consistently outperforms EEGNet across most subjects in benchmark datasets.
 
----
+
 
 ## Architecture
 
