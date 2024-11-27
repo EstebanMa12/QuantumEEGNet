@@ -2,9 +2,7 @@
 
 ## QEEGNet: Quantum Machine Learning for Enhanced Electroencephalography Encoding (IEEE SiPS 2024)
 [![arXiv](https://img.shields.io/badge/arXiv-2407.19214-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2407.19214)  
-
-**Authors**: Michael Chi-Sheng Chen, Samuel Yen-Chi Chen, Aidan Hung-Wen Tsai, Chun-Shu Wei  
-**Affiliations**: Neuro Industry, National Yang Ming Chiao Tung University, Brookhaven National Laboratory  
+ 
 
 ![image](https://github.com/user-attachments/assets/76786943-880b-4134-a34e-d828f89a00f1)
 
