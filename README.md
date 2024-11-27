@@ -1,6 +1,7 @@
 # QuantumEEGNet
 
-# QEEGNet: Quantum Machine Learning for Enhanced Electroencephalography Encoding
+## QEEGNet: Quantum Machine Learning for Enhanced Electroencephalography Encoding (IEEE SiPS 2024)
+[![arXiv](https://img.shields.io/badge/arXiv-2407.19214-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2407.19214)  
 
 **Authors**: Michael Chi-Sheng Chen, Samuel Yen-Chi Chen, Aidan Hung-Wen Tsai, Chun-Shu Wei  
 **Affiliations**: Neuro Industry, National Yang Ming Chiao Tung University, Brookhaven National Laboratory  
@@ -49,4 +50,16 @@ For more details, refer to the [dataset documentation](https://www.bbci.de/compe
 ## Usage
 Coming soon!
 
+## Citation
+Hope this idea is helpful. I would appreciate you citing us in your paper, and the github.
+
+```
+
+@article{chen2024qeegnet,
+  title={Qeegnet: Quantum machine learning for enhanced electroencephalography encoding},
+  author={Chen, Chi-Sheng and Chen, Samuel Yen-Chi and Tsai, Aidan Hung-Wen and Wei, Chun-Shu},
+  journal={arXiv preprint arXiv:2407.19214},
+  year={2024}
+}
+```
 
