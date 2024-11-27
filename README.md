@@ -32,7 +32,6 @@ QEEGNet consists of:
 2. **Quantum Encoding Layer**: Encodes classical features into quantum states using a parameterized quantum circuit.
 3. **Fully Connected Layers**: Converts quantum outputs into final classifications.
 
-![Architecture Diagram](link-to-architecture-diagram.png)  
 
 ---
 
