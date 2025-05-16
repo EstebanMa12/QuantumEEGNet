@@ -19,7 +19,8 @@ class QuantumLayer(nn.Module):
             for i in range(n_qubits):
                 qml.RY(inputs[i], wires=i)
             for j in range(n_layers):
-                qml.broadcast(qml.CNOT, wires=range(n_qubits), pattern="ring")
+                for k in range(n_qubits):
+                    qml.CNOT(wires=[k, (k + 1) % n_qubits])
                 for i in range(n_qubits):
                     qml.RY(weights[j, i], wires=i)
             return [qml.expval(qml.PauliZ(i)) for i in range(n_qubits)]
